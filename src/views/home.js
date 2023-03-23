@@ -151,7 +151,7 @@ const Home = (props) => {
             <h1 className="home-text12 Headline1">
               <span>Gestioná tus proyectos</span>
               <br></br>
-              <span>Optimiza tu tiempo</span>
+              <span>Optimizá tu tiempo</span>
             </h1>
             <PrimaryButton button="Empecemos"></PrimaryButton>
           </div>

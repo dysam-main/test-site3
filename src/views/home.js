@@ -1,45 +1,49 @@
-import React from 'react'
+import React from "react";
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
-import StoreBanner from '../components/store-banner'
-import PrimaryButton from '../components/primary-button'
-import FeatureCard from '../components/feature-card'
-import TestimonialsCard from '../components/testimonials-card'
-import StatsCard from '../components/stats-card'
-import LinkIconButton from '../components/link-icon-button'
-import './home.css'
+import StoreBanner from "../components/store-banner";
+import PrimaryButton from "../components/primary-button";
+import FeatureCard from "../components/feature-card";
+import TestimonialsCard from "../components/testimonials-card";
+import StatsCard from "../components/stats-card";
+import LinkIconButton from "../components/link-icon-button";
+import "./home.css";
+import { Scrollchor } from "react-scrollchor";
 
 const Home = (props) => {
   return (
     <div className="home-container">
       <Helmet>
-        <title>Landify</title>
-        <meta property="og:title" content="Landify" />
+        <title>dysamPro</title>
+        <meta property="og:title" content="dysamPro" />
       </Helmet>
       <div data-role="Header" className="home-header-container">
         <header className="home-header">
           <div className="home-logo">
             <img
               alt="image"
-              src="/playground_assets/logotype-dark.svg"
+              src="/playground_assets/logotype-dark.png"
               className="home-image"
             />
           </div>
           <div className="home-menu">
-            <span className="home-text">About</span>
-            <span className="home-text01">Products</span>
-            <span className="home-text02">Pricing</span>
-            <span className="home-text03">Blog</span>
-            <span className="home-text04">Jobs</span>
-            <span className="home-text05">More</span>
-            <svg viewBox="0 0 1024 1024" className="home-icon">
-              <path d="M316 366l196 196 196-196 60 60-256 256-256-256z"></path>
-            </svg>
+            <Scrollchor to="#Features">
+              <span className="home-text01">Características</span>
+            </Scrollchor>
+            <Scrollchor to="Testimonials">
+              <span className="home-text02">Testimonios</span>
+            </Scrollchor>
+            <Scrollchor to="Achievements">
+              <span className="home-text02">Logros</span>
+            </Scrollchor>
+            <Scrollchor to="Download">
+              <span className="home-text03">Descargar</span>
+            </Scrollchor>
           </div>
-          <div className="home-container01">
+          {/* <div className="home-container01">
             <StoreBanner></StoreBanner>
-          </div>
+          </div> */}
           <div data-role="BurgerMenu" className="home-burger-menu">
             <svg viewBox="0 0 1024 1024" className="home-menu1">
               <path d="M810.667 725.333h-597.333c-47.061 0-85.333 38.272-85.333 85.333s38.272 85.333 85.333 85.333h597.333c47.061 0 85.333-38.272 85.333-85.333s-38.272-85.333-85.333-85.333z"></path>
@@ -64,12 +68,18 @@ const Home = (props) => {
             </div>
           </div>
           <div className="home-mid">
-            <span className="home-text06">About</span>
-            <span className="home-text07">Products</span>
-            <span className="home-text08">Pricing</span>
-            <span className="home-text09">Blog</span>
-            <span className="home-text10">Jobs</span>
-            <span className="home-text11">More</span>
+            <Scrollchor to="#Features">
+              <span className="home-text01">Características</span>
+            </Scrollchor>
+            <Scrollchor to="Testimonials">
+              <span className="home-text02">Testimonios</span>
+            </Scrollchor>
+            <Scrollchor to="Achievements">
+              <span className="home-text02">Logros</span>
+            </Scrollchor>
+            <Scrollchor to="Download">
+              <span className="home-text03">Descargar</span>
+            </Scrollchor>
           </div>
           <div className="home-bot">
             <div className="home-container02">
@@ -134,16 +144,16 @@ const Home = (props) => {
           </div>
         </div>
       </div>
-      <div className="home-main">
+      <div className="home-main" id="Home">
         <div className="home-blur-background"></div>
         <div className="home-hero">
           <div className="home-container07">
             <h1 className="home-text12 Headline1">
-              <span>Organize projects.</span>
+              <span>Gestioná tus proyectos</span>
               <br></br>
-              <span>Get more done.</span>
+              <span>Optimiza tu tiempo</span>
             </h1>
-            <PrimaryButton button="Get Started"></PrimaryButton>
+            <PrimaryButton button="Empecemos"></PrimaryButton>
           </div>
           <img
             alt="image"
@@ -201,8 +211,8 @@ const Home = (props) => {
         />
         <div className="home-divider1"></div>
       </div>
-      <div className="home-features">
-        <h2 className="Headline2 home-text16">Tailor-made features</h2>
+      <div className="home-features" id="Features">
+        <h2 className="Headline2 home-text16">Características a medida</h2>
         <span className="home-text17">
           <span className="home-text18">
             Lorem ipsum is common placeholder text used to demonstrate the
@@ -210,30 +220,30 @@ const Home = (props) => {
           </span>
         </span>
         <div className="home-features1">
-          <FeatureCard card_title="Robust workflow"></FeatureCard>
+          <FeatureCard card_title="PRoceso Robusto"></FeatureCard>
           <FeatureCard
             image_src="/playground_assets/02.svg"
-            card_title="Flexibility"
+            card_title="Flexibilidad"
           ></FeatureCard>
           <FeatureCard
             image_src="/playground_assets/03.svg"
-            card_title="User friendly"
+            card_title="Amigable"
           ></FeatureCard>
           <FeatureCard
             image_src="/playground_assets/04.svg"
-            card_title="Multiple layouts"
+            card_title="Múltiples Diseños"
           ></FeatureCard>
           <FeatureCard
             image_src="/playground_assets/05.svg"
-            card_title="Better compoents"
+            card_title="Componentes optimizados"
           ></FeatureCard>
           <FeatureCard
             image_src="/playground_assets/06.svg"
-            card_title="Well organized"
+            card_title="Organización"
           ></FeatureCard>
         </div>
       </div>
-      <div className="home-testimonials">
+      <div className="home-testimonials" id="Testimonials">
         <div className="home-container08">
           <div className="home-container09">
             <img
@@ -242,9 +252,9 @@ const Home = (props) => {
               className="home-image08"
             />
             <h1 className="home-text19 Headline2">
-              Real Stories from Real Customers
+              Historias Reales de Clientes Reales
             </h1>
-            <span>Get inspired by these stories.</span>
+            <span>Inspírate con nuestras experiencias</span>
             <div className="home-container10">
               <TestimonialsCard image_src="/playground_assets/logo-4.svg"></TestimonialsCard>
             </div>
@@ -253,7 +263,7 @@ const Home = (props) => {
             <div className="home-container12">
               <TestimonialsCard
                 src="/playground_assets/logo-1.svg"
-                text="I used Landify and created a landing page for my startup within a week. The Landify UI Kit is simple and highly intuitive, so anyone can use it."
+                text="Es increíble lo fácil que puedo gestionar mútiples proyectos en simultáneo"
                 text1="Jane Cooper"
                 text2="CEO, Airbnb"
                 image_src="/playground_assets/logo-1.svg"
@@ -261,7 +271,7 @@ const Home = (props) => {
             </div>
             <div className="home-container13">
               <TestimonialsCard
-                text="Landify saved our time in designing my company page."
+                text="dysamPro sólo me ahorra tiempo"
                 text1="Kristin Watson"
                 text2="Co-Founder, FedEx"
                 image_src="/playground_assets/logo-2.svg"
@@ -270,24 +280,15 @@ const Home = (props) => {
           </div>
         </div>
       </div>
-      <div className="home-achievements">
+      <div className="home-achievements" id="Achievements">
         <div className="home-container14">
           <h2 className="home-text21">
-            <span className="home-text22">
-              Our 18 years of
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: ' ',
-                }}
-              />
-            </span>
+            <span className="home-text22">18 años</span>
             <br></br>
-            <span>achievements</span>
+            <span>de éxitos</span>
           </h2>
           <span className="home-text25">
-            <span className="home-text26">
-              With our super powers we have reached this
-            </span>
+            <span className="home-text26">Hemos conseguido</span>
           </span>
         </div>
         <div className="home-container15">
@@ -295,20 +296,20 @@ const Home = (props) => {
             <StatsCard
               number="10,000+"
               image_src="/playground_assets/01.svg"
-              description="Downloads per day"
+              description="Descargas por día"
             ></StatsCard>
             <StatsCard
-              number="2 Milion"
+              number="2M"
               image_src="/playground_assets/04.svg"
-              description="Users"
+              description="Usuarios"
             ></StatsCard>
           </div>
           <div className="home-container17">
             <StatsCard number="500+" description="Clients"></StatsCard>
             <StatsCard
-              number="140"
+              number="20"
               image_src="/playground_assets/07.svg"
-              description="Countries"
+              description="Países"
             ></StatsCard>
           </div>
         </div>
@@ -323,7 +324,7 @@ const Home = (props) => {
           />
         </div>
         <div className="home-container19">
-          <h3 className="Headline3">Headline</h3>
+          <h3 className="Headline3">Titular</h3>
           <span className="home-text28 Lead1">
             <span className="home-text29">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -332,14 +333,14 @@ const Home = (props) => {
               suscipit non. Non commodo volutpat, pharetra, vel.
             </span>
           </span>
-          <LinkIconButton text="Get Started"></LinkIconButton>
+          <LinkIconButton text="Empecemos"></LinkIconButton>
         </div>
       </div>
       <div className="home-feature2">
         <div className="home-container20">
           <h2 className="Headline2 home-text30">
             <span className="home-text31">
-              Enter the world of all fashion trends
+              Entra en el mundo proyectos digitales
             </span>
           </h2>
           <span className="home-text32 Lead1">
@@ -358,23 +359,18 @@ const Home = (props) => {
           className="home-image10"
         />
       </div>
-      <div className="home-cta">
+      <div className="home-cta" id="Download">
         <div className="home-container21">
           <div className="home-container22">
             <h2 className="Headline2 home-text34">
               <span className="home-text35">
-                Manage your projects from your mobile
+                Gestioná tus proyectos desde el celular
               </span>
             </h2>
             <span className="home-text36 Lead1">
               <span className="home-text37">
-                Download the app to manage your projects, keep track of the
-                progress and complete tasks without procastinating. Stay on
-                track and complete on time!
+              Descarga nuestra app para gestionar proyectos, seguí los avances online y optimizá tus tiempos.
               </span>
-            </span>
-            <span className="home-text38 Subtitle2">
-              <span className="home-text39">Get the App</span>
             </span>
             <StoreBanner></StoreBanner>
           </div>
@@ -398,21 +394,24 @@ const Home = (props) => {
         <footer className="home-container24">
           <img
             alt="image"
-            src="/playground_assets/logotype-light.svg"
+            src="/playground_assets/logotype-light.png"
             className="home-image13"
           />
           <div className="home-container25">
-            <span className="home-text40">About</span>
-            <span className="home-text41">Features</span>
-            <span className="home-text42">Pricing</span>
-            <span className="home-text43">Careers</span>
-            <span className="home-text44">Help</span>
-            <span className="home-text45">Privacy Policy</span>
+          <Scrollchor to="#Features">
+              <span className="home-text40">Características</span>
+            </Scrollchor>
+            <Scrollchor to="Testimonials">
+              <span className="home-text40">Testimonios</span>
+            </Scrollchor>
+            <Scrollchor to="Achievements">
+              <span className="home-text40">Logros</span>
+            </Scrollchor>
           </div>
           <div className="home-divider2"></div>
           <div className="home-container26">
             <span className="home-text46 Body2">
-              © 2020 Landify UI Kit. All rights reserved
+              © 2022 dysamPro All rights reserved
             </span>
             <div className="home-container27">
               <a
@@ -477,7 +476,7 @@ const Home = (props) => {
         </footer>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
